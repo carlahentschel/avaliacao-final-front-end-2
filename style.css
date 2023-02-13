@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.bg-image {
+    background-image: url(./assets/images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.bg-color {
+    background-color: #dde5b6;
+}
+
+.card-login {
+    width: 350px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    animation: imagemHome 6s;
+}
+
+@keyframes imagemHome {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.card-login h2 {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+}
+
+.card-login form {
+    font-size: 1.8rem;
+}
+
+.card-login form .form-group {
+    margin-bottom: 12px;
+}
+
+.card-login form input {
+    font-size: 1.8rem;
+}
+
+.card-login form input[type="submit"]{
+    margin-top: 12px;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.btn-default {
+    background-color: #09bc8a;
+    color: white;
+}
+
+.btn-default:hover {
+    background-color: #75dddd;
+    color: white;
+}
+
+.card-recados {
+    width: 90%;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.float-button {
+    bottom: 50px;
+    right: 120px;
+    padding: 0 !important;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #09bc8a;
+}
+
+.float-button2 {
+    bottom: 50px;
+    right: 50px;
+    padding: 0 !important;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 10%;
+    background-color: #09bc8a;
+}
+
+.toast-position {
+    top: 50px;
+    right: 50px;
+}
