@@ -40,6 +40,7 @@ form.addEventListener('submit', (event) => {
     listaUsuarios.push(novoUsuario)
     guardarNoLocalStorage('usuarios', listaUsuarios)
 
+    // form.classList.remove('was-validated')
     form.reset()
     // NÃO ESTÁ MOSTRADO O ALERTA E ESTÁ INDO DIRETO PRA PÁGINA DE LOGIN
     mostrarAlerta('sucess', 'Cadastro realizado com sucesso!')

@@ -1,8 +1,13 @@
-let indiceAtualizado = -1 
+let indiceAtualizado = -1;
+
 const usuarioLogado = buscarDadosDoLocalStorage('usuarioLogado');
+
 const meuModalCriarRecado = new bootstrap.Modal('#criar-recado');
 const meuModalEditar = new bootstrap.Modal('#modal-editar');
-const meuModalExcluir = new bootstrap.Modal('#modal-excluir')
+const meuModalExcluir = new bootstrap.Modal('#modal-excluir');
+
+const toastRecado = document.getElementById('toast-recados');
+const toastBS = new bootstrap.Toast(toastRecado);
 
 document.addEventListener('DOMContentLoaded', () => {
     if(!usuarioLogado.email) {
@@ -15,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const formRecado = document.getElementById('form-recado');
 const formEditar = document.getElementById('form-editar');
 const tbody = document.getElementById('registros');
-
 
 formRecado.addEventListener('submit', (evento) => {
     evento.preventDefault()
@@ -34,7 +38,6 @@ formRecado.addEventListener('submit', (evento) => {
         detalhamento: detalhamento,
     }
 
-    /* listaRecados.push(novoRecado) */
     usuarioLogado.recados.push(novoRecado);
     guardarNoLocalStorage('usuarioLogado', usuarioLogado)
 
@@ -69,10 +72,9 @@ formEditar.addEventListener('submit', (evento) => {
     formEditar.classList.remove('was-validated');
     formEditar.reset();
 
-    // mostrarAlerta('success', 'Recado atualizado com sucesso!')
+    mostrarAlerta('success', 'Recado atualizado com sucesso!')
 
     indiceAtualizado= -1
-
 })
 
 function montarRegistrosNoHTML() {
@@ -141,10 +143,7 @@ function apagarRecado(index, id) {
 
     meuModalExcluir.hide();
 
-    // mostrar alerta com toast
-
-    // mostrarAlerta('success', 'Recado excluído com sucesso!')
-
+    mostrarAlerta('success', 'Recado excluído com sucesso!')
 }
 
 function prepararEdicao(index, id) {
@@ -178,4 +177,20 @@ function salvarRecados() {
     listaUsuarios[acharUsuario].recados = usuarioLogado.recados
 
     guardarNoLocalStorage('usuarios', listaUsuarios)
+}
+
+function mostrarAlerta(tipo, mensagem) {
+
+    toastRecado.classList.add(`text-bg-${tipo}`)
+    const espacoMensagem = document.getElementById('alerta-recados')
+    espacoMensagem.innerHTML = mensagem
+
+    toastBS.show()
+
+    setTimeout(() => {
+        toastBS.hide()
+
+        toastRecado.classList.remove(`text-bg-${tipo}`)
+
+    }, 5000)
 }
