@@ -19,15 +19,14 @@ html {
     background-color: #dde5b6;
 }
 
-.card-login {
-    width: 350px;
-    height: min-content;
+.card-default {
     padding: 20px;
     border-radius: 12px;
-    animation: imagemHome 6s;
+    animation: card 6s;
+    margin: 50px auto;
 }
 
-@keyframes imagemHome {
+@keyframes card {
     0% {
       opacity: 0;
     }
@@ -35,6 +34,15 @@ html {
       opacity: 1;
     }
   }
+
+
+.card-recados {
+    width: 350px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 50px auto;
+}
 
 .card-login h2 {
     font-size: 3.2rem;

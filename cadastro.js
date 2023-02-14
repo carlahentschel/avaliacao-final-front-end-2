@@ -42,10 +42,11 @@ form.addEventListener('submit', (event) => {
 
     // form.classList.remove('was-validated')
     form.reset()
-    // NÃO ESTÁ MOSTRADO O ALERTA E ESTÁ INDO DIRETO PRA PÁGINA DE LOGIN
-    mostrarAlerta('sucess', 'Cadastro realizado com sucesso!')
+    mostrarAlerta('success', 'Cadastro realizado com sucesso!')
    
-    window.location.href = './login.html'
+    setTimeout(()=> {
+        window.location.href = './login.html'
+    }, 5100)
 })
 
 function mostrarAlerta(tipo, mensagem) {
