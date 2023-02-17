@@ -22,19 +22,21 @@
 
             <h2>MEUS RECADOS</h2>
 
-            <table class="table table-striped fs-3">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Tarefa</th>
-                    <th scope="col">Detalhamento</th>
-                    <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="registros">
-
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-striped fs-3">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tarefa</th>
+                        <th scope="col">Detalhamento</th>
+                        <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registros">
+    
+                    </tbody>
+                </table>
+            </div>
       
         </section>
 
@@ -59,7 +61,7 @@
                 <form id="form-recado" class="needs-validation" novalidate>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <input type="text" class="form-control fs-4" aria-label="Tarefa" id="tarefa" minlength="3" required placeholder="Tarefa">
+                            <input type="text" class="form-control fs-4" maxlength="20" aria-label="Tarefa" id="tarefa" minlength="3" required placeholder="Tarefa">
                             <div class="invalid-feedback">
                                 Você precisa cadastrar a tarefa!
                             </div>

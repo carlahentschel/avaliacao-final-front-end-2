@@ -112,3 +112,10 @@ p {
     top: 50px;
     right: 50px;
 }
+
+.td-responsive {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}

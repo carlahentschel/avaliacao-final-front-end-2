@@ -85,8 +85,8 @@ function montarRegistrosNoHTML() {
         tbody.innerHTML += `
             <tr id="${valor.id}">
                 <td>${index+1} </td>
-                <td>${valor.tarefa}</td>
-                <td>${valor.detalhamento}</td>
+                <td class= "td-responsive" style="width:20%">${valor.tarefa}</td>
+                <td class= "td-responsive" style="width:80%">${valor.detalhamento}</td>
                 <td>
                     <button class="btn btn-success m-1 fs-4" aria-label="Editar" onclick="prepararEdicao(${index})">
                         <i class="bi bi-pencil-square"></i>                       
